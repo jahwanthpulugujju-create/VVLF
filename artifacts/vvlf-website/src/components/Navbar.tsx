@@ -23,6 +23,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
   const [location, navigate] = useLocation();
 
   const handleDropdownClick = (e: React.MouseEvent, href: string) => {
@@ -167,28 +168,72 @@ export function Navbar() {
       {/* ── Mobile Menu ── */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          mobileOpen ? "max-h-[640px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white border-t border-slate-100 shadow-xl px-4 py-4">
+        <div className="bg-white border-t border-slate-100 shadow-xl px-4 py-4 max-h-[85vh] overflow-y-auto">
           <div className="flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`flex items-center justify-between font-semibold py-3 px-4 rounded-xl transition-colors text-sm ${
-                  isActive(link.href)
-                    ? "text-primary bg-primary/5"
-                    : "text-[#080c14] hover:bg-slate-50"
-                }`}
-              >
-                {link.name}
-                {link.dropdown && <ChevronDown className="w-4 h-4 text-slate-400" />}
-              </Link>
-            ))}
-            <div className="pt-3 mt-1 border-t border-slate-100">
+            {navLinks.map((link) =>
+              link.dropdown ? (
+                <div key={link.name} className="flex flex-col">
+                  <div className="flex items-center justify-between font-semibold py-3 px-4 rounded-xl text-sm text-[#080c14] hover:bg-slate-50">
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={isActive(link.href) ? "text-primary font-bold" : "text-[#080c14]"}
+                    >
+                      {link.name}
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                      className="p-1 rounded-lg hover:bg-slate-100 text-slate-500"
+                      aria-label="Toggle programs menu"
+                    >
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          mobileProgramsOpen ? "rotate-180 text-primary" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  {mobileProgramsOpen && (
+                    <div className="pl-6 pr-2 py-1 flex flex-col gap-1 bg-slate-50/80 rounded-xl mb-1 border border-slate-100/60">
+                      {link.dropdown.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={(e) => {
+                            handleDropdownClick(e, sub.href);
+                            setMobileOpen(false);
+                          }}
+                          className="flex items-center gap-2.5 py-2 px-3 text-xs font-medium text-slate-600 hover:text-primary hover:bg-white rounded-lg transition-colors"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex items-center justify-between font-semibold py-3 px-4 rounded-xl transition-colors text-sm ${
+                    isActive(link.href)
+                      ? "text-primary bg-primary/5"
+                      : "text-[#080c14] hover:bg-slate-50"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
+            <div className="pt-3 mt-2 border-t border-slate-100">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVdqSv6MBAmUJatiOsjqBrhx825IRaHbHx3HKZG4Np1CrmrQ/viewform" target="_blank" rel="noreferrer" className="block">
-                <button className="w-full bg-[#080c14] text-white font-bold py-3.5 rounded-xl text-sm">
+                <button className="w-full bg-[#080c14] text-white font-bold py-3.5 rounded-xl text-sm shadow-md active:scale-95 transition-transform">
                   Apply Now
                 </button>
               </a>

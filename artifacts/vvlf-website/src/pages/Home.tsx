@@ -143,7 +143,7 @@ function PhotoMarquee() {
   const doubled = [...communityPhotos, ...communityPhotos];
 
   return (
-    <div className="relative w-full overflow-hidden rounded-3xl" style={{ height: 420 }}>
+    <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl h-[280px] sm:h-[350px] md:h-[420px]">
       <div
         ref={containerRef}
         className="flex gap-4 absolute top-0 left-0"
@@ -152,14 +152,13 @@ function PhotoMarquee() {
         {doubled.map((photo, i) => (
           <div
             key={i}
-            className="shrink-0 rounded-2xl overflow-hidden border border-white/10 shadow-lg"
-            style={{ width: 320, height: 420 }}
+            className="shrink-0 rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 shadow-lg w-[230px] sm:w-[280px] md:w-[320px] h-[280px] sm:h-[350px] md:h-[420px]"
           >
             <img
               src={`${import.meta.env.BASE_URL}images/${photo.src}`}
               alt={photo.alt}
               className="w-full h-full object-cover"
-              draggable={false}
+              loading="lazy"
             />
           </div>
         ))}
@@ -191,16 +190,16 @@ export default function Home() {
             <FadeIn direction="left">
               <div className="space-y-7">
                 <div>
-                  <p className="text-primary tracking-wider uppercase mb-3 text-[30px] font-extrabold">
+                  <p className="text-primary tracking-wider uppercase mb-2 text-xs sm:text-sm font-extrabold">
                     About VVLF
                   </p>
-                  <h2 className="text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.1] mb-5">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.15] mb-5">
                     Where Campus Ideas<br />Become Real Companies
                   </h2>
-                  <p className="text-slate-500 text-lg leading-relaxed mb-4">
+                  <p className="text-slate-500 text-base sm:text-lg leading-relaxed mb-4">
                     Vishnu Venture Labs Foundation (VVLF) is a not-for-profit Section 8 company — the innovation and entrepreneurship ecosystem of BVRIT — built to empower students to transform bold ideas into viable ventures.
                   </p>
-                  <p className="text-slate-500 text-base leading-relaxed">
+                  <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
                     We bridge the gap between classroom learning and real-world impact by offering structured programs, expert mentorship, infrastructure, and a vibrant community of 400+ innovators. From your first spark of curiosity to your company's first customer, VVLF walks the journey with you.
                   </p>
                 </div>
@@ -217,12 +216,12 @@ export default function Home() {
         </div>
       </section>
       {/* ══ 4. BUILDING BLOCKS ═══════════════════════════════════════ */}
-      <section className="py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-primary tracking-wider uppercase mb-3 font-extrabold bg-[transparent] text-[30px]">WHAT YOU GET</p>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.1]">We provide to Build a Startup</h2>
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+              <p className="text-primary tracking-wider uppercase mb-2 font-extrabold text-xs sm:text-sm">WHAT YOU GET</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.15]">We provide to Build a Startup</h2>
               <p className="text-slate-500 text-lg leading-relaxed mt-4">
                 VVLF removes every excuse not to build. We give student founders the unfair advantage they deserve.
               </p>
@@ -303,12 +302,12 @@ export default function Home() {
       <section className="py-24 bg-[#f7f8fa] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-primary font-bold tracking-wider uppercase mb-3 text-[30px]">Ecosystem Partners</p>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.1] mb-4">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+              <p className="text-primary font-bold tracking-wider uppercase mb-2 text-xs sm:text-sm">Ecosystem Partners</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.15] mb-4">
                 Built on Strong Partnerships
               </h2>
-              <p className="text-slate-500 text-lg leading-relaxed">
+              <p className="text-slate-500 text-base sm:text-lg leading-relaxed">
                 Backed by academia, industry, and government — so our founders have every door open.
               </p>
             </div>
@@ -346,12 +345,12 @@ export default function Home() {
         </div>
       </section>
       {/* ══ 7. TESTIMONIALS ══════════════════════════════════════════ */}
-      <section className="py-28 bg-[#f7f8fa]">
+      <section className="py-20 sm:py-28 bg-[#f7f8fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="text-center max-w-xl mx-auto mb-16">
-              <p className="text-primary tracking-wider uppercase mb-3 text-[30px] font-extrabold">Voices from the Ecosystem</p>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.1]">
+            <div className="text-center max-w-xl mx-auto mb-12 sm:mb-16">
+              <p className="text-primary tracking-wider uppercase mb-2 text-xs sm:text-sm font-extrabold">Voices from the Ecosystem</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#080c14] leading-[1.15]">
                 Founders Who Built Here
               </h2>
             </div>
