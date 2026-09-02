@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "pnpm --dir artifacts/vvlf-website dev",
     "build:website": "pnpm --dir artifacts/vvlf-website run build",
-    "preview": "pnpm --dir artifacts/vvlf-website run serve",
-    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "build": "pnpm --filter @workspace/vvlf-website run build && node -e \"const fs=require('fs'); fs.cpSync('artifacts/vvlf-website/dist', 'dist', {recursive: true});\"",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },

@@ -1,8 +1,8 @@
 {
-  "buildCommand": "pnpm --filter @workspace/vvlf-website run build",
-  "outputDirectory": "artifacts/vvlf-website/dist",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
   "installCommand": "pnpm install",
-  "framework": "vite",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
