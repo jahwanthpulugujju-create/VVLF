@@ -105,17 +105,17 @@ export function Navbar() {
                   <ChevronDown className="w-3.5 h-3.5 group-hover/dd:rotate-180 transition-transform duration-200 opacity-60" />
                 </Link>
 
-                {/* Dropdown */}
-                <div className="absolute top-full left-0 mt-2 w-58 bg-white rounded-2xl shadow-2xl shadow-black/10 border border-slate-100 opacity-0 invisible group-hover/dd:opacity-100 group-hover/dd:visible transition-all duration-200 translate-y-2 group-hover/dd:translate-y-0 pointer-events-none group-hover/dd:pointer-events-auto">
-                  <div className="p-2">
+                {/* Dropdown with seamless hover bridge & zero gap */}
+                <div className="absolute top-full left-0 pt-1 w-60 opacity-0 invisible group-hover/dd:opacity-100 group-hover/dd:visible transition-all duration-150 pointer-events-none group-hover/dd:pointer-events-auto z-50">
+                  <div className="bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100/80 p-2">
                     {link.dropdown.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         onClick={(e) => handleDropdownClick(e, item.href)}
-                        className="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-600 hover:text-[#080c14] hover:bg-slate-50 rounded-xl transition-colors cursor-pointer"
+                        className="flex items-center gap-3 px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-xl transition-all cursor-pointer group/item"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-primary/40 group-hover/item:bg-primary group-hover/item:scale-125 transition-all shrink-0" />
                         {item.name}
                       </a>
                     ))}
