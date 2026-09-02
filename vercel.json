@@ -3,6 +3,25 @@
   "outputDirectory": "dist",
   "installCommand": "pnpm install",
   "framework": null,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOWALL"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://vishnuventurelabs.com https://*.vishnuventurelabs.com http://vishnuventurelabs.com http://*.vishnuventurelabs.com"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
