@@ -1,0 +1,35 @@
+packages:
+  "framer-motion": "For high-quality page transitions and scroll-triggered animations"
+  "react-countup": "For animated number counters in the impact stats section"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes without style conflicts"
+
+images:
+  - path: "artifacts/vvlf-website/public/images/hero-bg.png"
+    description: "Abstract deep navy and electric blue gradient mesh background, subtle light leaks, high-tech innovation feel, clean and minimal."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/sdg-grid.png"
+    description: "Abstract colorful geometric grid representing the 17 UN Sustainable Development Goals, modern minimal corporate style."
+    aspect_ratio: "1:1"
+  - path: "artifacts/vvlf-website/public/images/failathon.png"
+    description: "Students collaborating in a modern college classroom, brainstorming with sticky notes, vibrant and energetic startup culture."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/pivot.png"
+    description: "Hackathon event at a university, students coding on laptops late at night, glowing screen light, intense focus."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/saarthis.png"
+    description: "Inclusive technology design session, students working on accessibility hardware, modern lab setting."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/epics.png"
+    description: "Large group of college students in a modern auditorium presenting startup ideas, energetic community impact."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/event-placeholder.png"
+    description: "Professional networking event, people talking in a modern well-lit hall with blue accents."
+    aspect_ratio: "16:9"
+  - path: "artifacts/vvlf-website/public/images/team-avatar.png"
+    description: "Abstract minimal geometric portrait avatar, deep blue gradients, professional corporate style."
+    aspect_ratio: "1:1"
+
+notes:
+  - All sections will reside on a single page with smooth scrolling.
+  - Form submission is simulated since this is a static site.

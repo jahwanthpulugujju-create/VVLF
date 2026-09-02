@@ -1,0 +1,326 @@
+I only have a rendered capture of one site page, not a live URL or full sitemap, so this is a tailored audit of the **Events / Journey page** shown in the PDF. The page is already strong visually, and the main opportunity is to improve clarity, scannability, accessibility, and conversion flow. 
+
+# 1) Current-page assessment
+
+## User goals
+
+From the screenshot, the page appears to support these goals:
+
+* Understand the organization’s journey and credibility through milestones.
+* Discover upcoming and past events.
+* Filter events by year/type.
+* Move toward conversion through “Apply Now,” “Register,” “View Details,” and “Notify Me.” 
+
+## Quick heuristic evaluation
+
+### Usability
+
+Strong visual hierarchy, but the timeline layout is dense and requires a lot of scrolling. Event cards and the vertical timeline compete for attention, which makes scanning harder than it should be. Some CTAs appear repetitive and under-differentiated. 
+
+### Accessibility
+
+Likely gaps:
+
+* Color-only status chips and filters may not be sufficient for non-visual users.
+* Small text in the timeline and footer may fail readability.
+* The alternating layout can be confusing for keyboard and screen-reader users if the DOM order does not match the visual order. 
+
+### Performance
+
+The page is image-heavy, with many large event photos in a long scroll. That suggests a risk of slow load, layout shift, and poor mobile performance if images are not compressed, lazy-loaded, and dimensioned properly. 
+
+### Content quality
+
+The content is credible and specific, but event cards would benefit from more structured metadata: date, location, audience, format, registration deadline, and outcome. The page currently tells a story, but it does not yet maximize decision-making clarity. 
+
+---
+
+# 2) Concrete, actionable recommendations
+
+## A. Design
+
+1. Make the page intent clearer at the top.
+
+   * Replace the current hero copy with a sharper statement: what this page is for, who it is for, and what users should do next.
+   * Add one primary CTA and one secondary CTA only.
+
+2. Increase scanability of the timeline.
+
+   * Group content into sections such as “Upcoming,” “Recent,” and “Archived.”
+   * Add a compact summary row above the timeline: total events, next event date, latest milestone.
+
+3. Reduce visual repetition.
+
+   * Use one card style for events and one card style for milestones, not several subtly different variations.
+   * Standardize padding, image aspect ratios, badge placement, and CTA positions.
+
+4. Tighten footer hierarchy.
+
+   * Prioritize contact and application actions.
+   * Reduce low-value footer clutter and make the legal links visually lighter.
+
+## B. Content
+
+1. Add structured event fields on every card:
+
+   * Date
+   * Location
+   * Format: online / offline / hybrid
+   * Target audience
+   * Status: upcoming / live / completed
+   * One-line outcome or value statement
+
+2. Replace vague descriptions with outcome-oriented copy.
+
+   * Example: instead of “Learn everything about applying,” use “Understand eligibility, selection criteria, and how to apply in 10 minutes.”
+
+3. Add proof points.
+
+   * Attendance count
+   * Number of startups supported
+   * Number of cohorts completed
+   * Partner logos or testimonials near the CTA
+
+4. Add “what happens next” labels.
+
+   * For example: “Register interest,” “Get notified,” “View agenda,” “See recap.”
+
+## C. Navigation
+
+1. Improve filter usability.
+
+   * Keep year and type filters visible while scrolling if possible.
+   * Add search by title.
+   * Add sort by newest, upcoming, most popular.
+
+2. Make the page easier to jump through.
+
+   * Add an in-page mini index: “Upcoming events,” “Milestones,” “Past events,” “Apply now.”
+
+3. Add deep links.
+
+   * Each filter state and event card should have a shareable URL so users can return to the same view.
+
+## D. Interaction
+
+1. Clarify CTA hierarchy.
+
+   * Use one strong primary action per card.
+   * “View Details” should always be visually subordinate to the main action.
+
+2. Improve timeline interaction.
+
+   * Add expandable cards for long details instead of forcing long static descriptions.
+   * Make the timeline nodes clickable and keyboard-accessible.
+
+3. Add feedback states.
+
+   * Hover, focus, loading, empty state, and no-results state should be designed explicitly.
+
+4. Prevent accidental ambiguity.
+
+   * If “Join next edition” is inactive, make it visually disabled or replace it with a clear secondary CTA like “Join waitlist.”
+
+## E. Accessibility (ARIA and semantic structure)
+
+1. Use proper landmarks and headings.
+
+   * One `h1` for the page.
+   * Logical `h2` sections for Upcoming, Timeline, Milestones, CTA.
+
+2. Make filters accessible.
+
+   * Use real form controls, not div-only pills.
+   * Ensure clear focus rings and keyboard navigation.
+
+3. Add meaningful alt text.
+
+   * Describe the event purpose, not just “photo.”
+
+4. Improve contrast and text size.
+
+   * Some footer and meta text appears too faint.
+   * Ensure all text meets WCAG contrast thresholds.
+
+5. Ensure the timeline order is logical.
+
+   * The DOM order should match reading order even if the visual layout alternates left and right.
+
+6. Use ARIA only where needed.
+
+   * `aria-current` for active filters.
+   * `aria-expanded` for collapsible detail sections.
+   * Avoid over-labeling decorative elements.
+
+## F. Performance
+
+1. Compress and resize all event images.
+
+   * Serve responsive image sizes.
+   * Use modern formats like WebP/AVIF.
+
+2. Lazy-load below-the-fold cards.
+
+   * Especially important for the long timeline.
+
+3. Prevent layout shift.
+
+   * Reserve fixed dimensions for images and cards.
+
+4. Reduce JS cost for filters and animations.
+
+   * Use lightweight client-side state.
+   * Avoid heavy timeline animation on low-end devices.
+
+5. Optimize for mobile first.
+
+   * Defer noncritical background assets.
+   * Test on a slow 4G profile.
+
+---
+
+# 3) Prioritized changes
+
+## Quick wins
+
+### High impact
+
+* Add structured event metadata to every card.
+* Make one CTA primary and the others secondary.
+* Improve contrast and font size in footer and metadata.
+* Add lazy loading and fixed image dimensions.
+* Add a sticky or persistent filter bar on scroll.
+
+### Medium impact
+
+* Add search and sort controls.
+* Add an “Upcoming / Past / Milestones” content grouping.
+* Add empty and no-results states.
+* Standardize card layout and spacing.
+
+### Low impact
+
+* Fine-tune microcopy on badges and captions.
+* Add subtle motion to timeline transitions.
+* Refine footer link grouping.
+
+## Longer-term enhancements
+
+* Shareable filter URLs.
+* Personalization: “show me only workshops” or “events near me.”
+* Event detail pages with agenda, speakers, registration flow, and recap content.
+* Analytics-driven recommendations such as “related events.”
+
+---
+
+# 4) Validation guidance
+
+## KPIs to measure
+
+* CTA click-through rate.
+* Event detail page open rate.
+* Registration / interest submission rate.
+* Filter usage rate.
+* Scroll depth on the timeline page.
+* Time to first meaningful interaction.
+* Mobile bounce rate.
+* LCP, INP, CLS.
+
+## User flows to test
+
+* New visitor scanning the page and finding the next relevant event.
+* Returning visitor filtering to a specific event type.
+* Mobile user trying to register from the hero or an event card.
+* Keyboard-only user moving through filters and cards.
+* Screen-reader user understanding the page structure.
+
+## Sample A/B ideas
+
+* Hero with one CTA vs two CTAs.
+* Timeline layout vs grouped sections.
+* Compact card design vs richer metadata card design.
+* Sticky filter bar vs normal filter row.
+* “Register Interest” vs “Get Notified” as the primary CTA.
+
+---
+
+# 5) Consistency and polish
+
+## Copy/style guidelines
+
+* Keep verbs consistent: “Register,” “View details,” “Get notified,” “Apply now.”
+* Avoid mixed casing and inconsistent badge labels.
+* Keep descriptions to one clear sentence plus one supporting line.
+* Use outcome-led language over institution-led language.
+
+## Visual hierarchy
+
+* Page title first.
+* Next event and primary CTA second.
+* Filters third.
+* Timeline content after that.
+* Footer last, with low visual weight.
+
+## Responsive behavior
+
+* On mobile, collapse the timeline into a single-column list.
+* Keep filter chips horizontal scrollable or convert them into a dropdown.
+* Make CTAs full-width on small screens.
+* Avoid large image crops that remove context.
+* Ensure date, type, and status remain visible without horizontal scrolling.
+
+---
+
+# Final phased roadmap
+
+## Phase 1: MVP fixes
+
+**Effort:** 2–5 days
+
+1. Standardize cards and CTA hierarchy.
+2. Add structured metadata to every event card.
+3. Improve accessibility basics: headings, focus states, contrast, alt text.
+4. Compress images and enable lazy loading.
+5. Clean up footer and tighten copy.
+
+**Order:** first the card system, then accessibility, then performance.
+
+## Phase 2: Enhancements
+
+**Effort:** 1–2 weeks
+
+1. Add search, sort, and sticky filters.
+2. Group content into Upcoming / Past / Milestones.
+3. Add shareable filter URLs.
+4. Add no-results and loading states.
+5. Add richer event detail pages.
+
+**Order:** navigation and discovery first, then supporting states, then detail depth.
+
+## Phase 3: Refinements
+
+**Effort:** 2–4 weeks
+
+1. Introduce personalization and recommendations.
+2. Add analytics-driven optimization.
+3. Refine motion, micro-interactions, and timeline transitions.
+4. Improve content strategy with testimonials, outcomes, and partner proof.
+5. Run A/B tests and iterate.
+
+**Order:** instrumentation first, then experimentation, then polish.
+
+---
+
+# Reusable template for other pages
+
+Use the same audit format for Home, About, Programs, Startups, Team, and Contact:
+
+* user goal
+* heuristic review
+* fixes by design/content/navigation/accessibility/performance
+* prioritized changes
+* validation metrics
+* responsive and style rules
+* phased rollout
+
+If you share the URL or sitemap, I can turn this into a full page-by-page audit for the entire site.

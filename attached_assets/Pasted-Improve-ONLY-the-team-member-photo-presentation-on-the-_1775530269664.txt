@@ -1,0 +1,75 @@
+Improve ONLY the team member photo presentation on the Team page. Do not redesign the page, rewrite content, or change the card structure unless required to fix the image alignment.
+
+Goal:
+Make every team member photo display perfectly aligned, clear, centered, and visually consistent across the entire Team page. The photos must fit their containers cleanly with no cropping errors, no awkward cuts, no distortion, and no irregular positioning.
+
+Scope:
+Apply this fix to all profile photos in these sections:
+- Board of Directors
+  - Shri R. Rajagopal
+  - Shri K. Aditya Vissam
+  - Dr. K. Lakshmi Prasad
+  - Dr. Sanjay Dubey
+- Our Team
+  - Dr. M. K. Kaushik
+  - Rohith Sirpa
+
+Required outcome:
+1. All photos should be aligned to the same visual baseline and centered consistently inside each card.
+2. Every portrait should look sharp, properly scaled, and uniformly presented.
+3. No face, head, shoulder, or edge of the image should feel accidentally cut off.
+4. No image should appear shifted left/right/up/down compared to the others.
+5. The image treatment must look premium, stable, and intentional.
+6. The visual style must remain consistent with the existing page design.
+
+Implementation requirements:
+- Use one consistent image container size for every profile card.
+- Use a consistent aspect ratio for all portrait frames.
+- Ensure the photo is always centered both horizontally and vertically.
+- Prevent distortion completely.
+- Preserve image clarity by using the highest available source resolution.
+- Avoid awkward cropping of heads or faces.
+- If the current circular crop causes faces to be clipped, change the image wrapper to a safer presentation style that still feels polished, such as:
+  - a centered square frame with rounded corners, or
+  - a circle with extra internal padding and a neutral background, or
+  - a fixed portrait frame using object-fit: contain instead of aggressive cover cropping.
+- Make all image wrappers identical in size, padding, border radius, and shadow treatment.
+- Keep the image container visually balanced inside each card.
+- Make sure the photo does not overpower the name/title text.
+- Maintain clean spacing between the image, name, role, and tags.
+
+Technical guidance:
+- Use a single reusable TeamMemberPhoto component or equivalent.
+- Standardize image dimensions across all cards.
+- Use object-position: center center if using cover.
+- Prefer object-fit: contain if any portrait is being clipped by the current crop.
+- Add a subtle background behind the image so empty space, if any, still looks intentional.
+- Use responsive sizing so the layout remains correct on desktop, tablet, and mobile.
+- Ensure the image container does not shift when different photos have different original dimensions.
+- If needed, preprocess or normalize the images so each portrait has the same framing before rendering.
+- Use lazy loading for offscreen images.
+- Keep image loading smooth and avoid layout shift by reserving space with fixed width/height or aspect-ratio.
+
+Design rules:
+- Keep the look clean and professional.
+- Do not add heavy filters or decorative effects that reduce clarity.
+- Do not make photos overly small.
+- Do not create inconsistent circle sizes or uneven crop shapes.
+- Do not let one card look different from the others.
+- Preserve the current brand style and spacing, but improve consistency and visual polish.
+
+Acceptance criteria:
+- All 6 photos look aligned and balanced.
+- No portrait appears clipped in an awkward way.
+- No image is stretched, warped, or blurry.
+- All cards feel like part of the same system.
+- The page looks ready for production with no further manual fixing needed.
+
+After implementation, verify:
+- board members and core team photos are aligned on the same grid
+- image edges are clean
+- face centering is correct
+- mobile layout still keeps the same quality
+- no card height or alignment breaks because of image differences
+
+Only return the updated implementation for the photo alignment fix.

@@ -1,0 +1,178 @@
+Make sure you have these actually working:
+
+1. Section reveal
+Every section fades + slides up
+No section appears instantly
+2. Stagger working
+Cards don’t appear together
+They cascade (0.08–0.12 delay)
+3. Hero animation
+Headline → subheading → buttons sequence
+Not everything at once
+4. Stats animation
+Numbers count up (not static)
+If ANY of these are missing → fix before continuing
+
+Because Step 2 depends on this.
+
+🚀 STEP 2 — INTERACTIVE CARDS (THIS IS WHERE IT GETS REAL)
+
+This step makes your site feel alive + premium + responsive
+
+🔥 APPLY THIS TO ALL CARD TYPES
+
+You have:
+
+Program cards
+Venture cards
+Benefit cards
+Team cards
+
+👉 All must follow ONE system
+
+1. BASE CARD INTERACTION (MANDATORY)
+On hover:
+whileHover={{
+  scale: 1.03,
+  y: -6
+}}
+Add:
+transition: 0.3s
+smoother shadow
+2. DEPTH EFFECT (THIS IS WHAT MAKES IT PREMIUM)
+
+Add layered shadow:
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.3),
+0 0 20px rgba(37, 99, 235, 0.15);
+
+👉 Subtle blue glow = premium feel
+
+3. INTERNAL ELEMENT ANIMATION
+
+Inside each card:
+
+On hover:
+title moves slightly up
+description fades stronger
+icon scales slightly
+
+Example:
+
+title: y: -2
+icon: scale: 1.1
+desc: opacity: 1
+🧠 PROGRAM CARDS (IMPORTANT)
+Add THIS (big upgrade)
+A. “What happens next” reveal
+
+On hover OR click:
+
+show hidden line:
+
+Example:
+👉 “Move into prototype phase with mentor support”
+
+B. Highlight eligibility
+
+Make this visually stronger:
+
+colored badge
+icon + text
+slightly larger font
+C. CTA animation
+
+Button inside card:
+
+scale slightly on hover
+glow on hover
+💼 VENTURE CARDS (NEXT LEVEL)
+Upgrade them like this:
+On hover:
+
+Reveal overlay:
+
+startup description
+tag (AI / SaaS / etc.)
+status badge
+Add tilt effect (optional but powerful)
+rotateX: 2
+rotateY: -2
+🎯 BENEFIT CARDS
+
+Keep them simple but interactive:
+
+icon glow on hover
+slight background shift
+clean lift effect
+👥 TEAM CARDS
+On hover:
+
+Reveal:
+
+short bio
+LinkedIn icon
+
+Make it feel like:
+👉 “discoverable people”, not static list
+
+⚡ MICRO-INTERACTIONS (ADD THESE NOW)
+1. Button press effect
+whileTap={{ scale: 0.97 }}
+2. Link hover
+underline animates left → right
+3. Icon feedback
+rotate slightly OR scale
+4. Smooth transitions everywhere
+no instant jumps
+🧪 QUICK TEST (VERY IMPORTANT)
+
+After implementing:
+
+Ask yourself:
+
+Does it feel:
+responsive?
+smooth?
+intentional?
+consistent?
+
+If NOT → you’ve overdone or underdone something.
+
+🚫 COMMON MISTAKES
+
+❌ Cards jump too much
+❌ Hover is too aggressive
+❌ Every card behaves differently
+❌ Too many glow colors
+❌ Laggy animation
+
+🎯 RESULT AFTER STEP 2
+
+Your site will now feel:
+
+premium
+interactive
+responsive
+modern
+
+But still not complete.
+
+🚀 NEXT STEP (DON’T SKIP THIS)
+
+After you implement this, tell me:
+
+👉 “Step 2 done”
+
+Then I’ll guide you through:
+
+🔥 Step 3 — Decision tools (this is where users actually convert)
+
+That’s where your site goes from:
+
+“cool website”
+
+to:
+
+“I want to apply right now”

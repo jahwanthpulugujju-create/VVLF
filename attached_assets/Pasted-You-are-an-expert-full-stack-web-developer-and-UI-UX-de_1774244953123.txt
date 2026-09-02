@@ -1,0 +1,185 @@
+You are an expert full-stack web developer and UI/UX designer. Rebuild the Vishnu Venture Labs Foundation (VVLF) website from scratch as a modern, world-class single-page React application inspired by Y Combinator, T-Hub, and Scaler School of Technology.
+
+## BRAND CONTEXT
+- Name: Vishnu Venture Labs Foundation (VVLF)
+- Tagline: "Got an idea that can change lives?"
+- Sub-tagline: Join VVLF to turn impactful ideas into scalable ventures.
+- About: VVLF is the incubation center of BV Raju Institute of Technology. A not-for-profit Section 8 Company empowering early-stage startups, innovators, and researchers with world-class infrastructure, mentorship, and industry networks.
+- Partners: BVRIT, Kaiteki Innovations, TGIC
+- Key Thrust Areas: Deep Tech (AI, IoT, Robotics), Semiconductors, Assistive Technology, Sustainability & Green Tech
+
+## PAGES / SECTIONS TO BUILD (all in one React app with smooth scroll navigation):
+
+### 1. NAVBAR
+- Logo: "Vishnu Venture Labs Foundation" with a V icon
+- Links: Home, Programs (dropdown: Failathon, Pivot, SAARTHIS, EPICS-Cohort, Pre-Incubation Cohort), Facilities, Startups, Team, Events
+- Sticky, glassmorphism style on scroll
+- CTA button: "Apply Now" in accent color
+
+### 2. HERO SECTION
+- Bold headline: "Got an idea that can change lives?"
+- Sub: "Join VVLF to turn impactful ideas into scalable ventures."
+- Two CTAs: "Build With Us" (primary), "View Startups" (outline)
+- Background: Full-width image overlay with dark gradient (use a placeholder or gradient mesh)
+- Animated text entrance
+
+### 3. IMPACT STATS BAR
+- 4 animated counters: 50+ Startups, 200+ Innovators, 10+ Programs, 4 Incorporated Ventures
+- Dark background strip, large numbers with labels
+
+### 4. ABOUT VVLF
+- Left: SDG Goals grid image placeholder + short about paragraph
+- Right: Vision card + Mission card (bullet points)
+- Vision: "To build a world class, purpose-driven innovation ecosystem that nurtures inclusive, sustainable, and deep tech innovations — contributing to both economic growth and the UN Sustainable Development Goals."
+- Mission bullets: Foster cross-sector collaboration, Equip innovators with skills/tools/networks, Optimize solutions aligned with SDGs
+
+### 5. ECOSYSTEM PARTNERS
+- Logo grid: BVRIT, Kaiteki Innovations, TGIC
+- Clean white cards with hover lift effect
+
+### 6. KEY THRUST AREAS
+- 4 cards in a grid: Deep Tech (AI, IoT, Robotics), Semiconductors, Assistive Technology, Sustainability & Green Tech
+- Each card: icon + title + 1-line description
+- Hover animation with color accent
+
+### 7. PROGRAMS SECTION
+Build 5 program sub-sections with alternating image/text layout:
+
+**FAILATHON**
+Image left, text right. "We hosted a Failathon for 1st and 2nd year students at BVRIT, centered on the motto 'Come, let's Fail, and Learn.' Emphasized experiential learning and creative problem-solving using ideation tools to reframe failure as a vital part of innovation."
+
+**PIVOT**
+Text left, image right. "24 hours, countless ideas, one epic journey! PIVOT was a Makeathon for 2nd and 3rd year students — a whirlwind of creativity, innovation, and teamwork. From brainstorming to breakthroughs, students showed incredible resilience."
+
+**SAARTHIS**
+Image left, text right. "Project SAARTHIS — a year-long student innovation journey by VVLF, BVRIT, and Kaitei Innovations to co-create accessible, inclusive solutions for persons with disabilities."
+
+**EPICS-COHORT**
+Text left, image right. "True innovation stems from direct engagement with real-world challenges. At the EPICS Cohort Event at BVRIT, VVLF mentored 49 multidisciplinary student teams developing tangible solutions for pressing community needs."
+
+**PRE-INCUBATION COHORT 1.0**
+Full-width highlight section. "Our inaugural Pre-Incubation Cohort 1.0 has successfully concluded, resulting in the incubation of four promising startups. Participants were equipped with expert mentorship and key resources, empowering them to turn bold ideas into impactful ventures." Show 4 startup logos: olynk.ai (SAAS), MXC (Edu-Tech), Stud Entertainments (Entertainment), Nirvaha Wellness (Wellness)
+
+### 8. FACILITIES SECTION
+8 facility cards in a 4x2 grid:
+- Co-Working Space, Mentorship, IP Support, Funding, Networking Events, Software Tools, Technological Infrastructure, Maker Lab
+- Each: icon + name + short description (1 line)
+- Blue accent cards, clean modern design
+
+### 9. STARTUPS SECTION
+Show 7 startup cards in a clean grid:
+1. Innovable Solutions LLP — Social-impact startup for inclusive learning tools for children with disabilities (SDG 4 aligned)
+2. MXC Ignite LLP — Student-led innovation ecosystem connecting students with founders, CXOs, and incubators
+3. Nirvaha Wellness LLP — Wellness-tech startup blending ancient Indian wisdom with AI for emotional healing
+4. OLynk.AI LLP — AI-powered virtual COO for Indian D2C brands (₹2–10Cr revenue range)
+5. SALO — Digital platform for booking salon, spa, and grooming services
+6. Stud Entertainments — Filmmaking and tech startup delivering CinemaTech experiences
+7. VIINDE Instruments LLP — Smart dental solutions for practitioners (ergonomic workstations to digital imaging)
+
+Each card: logo placeholder + startup name + 2-line description + "Know More" button + LinkedIn icon
+
+### 10. EVENTS TIMELINE
+Vertical timeline with alternating left/right layout. 8 events:
+
+1. AUG 4, 2025 — "Milestone at Vishnu Venture Labs" — Startups from COHORT 1.0 have officially been incorporated, turning bold ideas into ventures!
+2. JUL 24, 2025 — "Fostering Grassroots Innovation" — Supporting the Innovators' Introductory Meet for innovators from Medak district.
+3. JUL 10, 2025 — "Project SAARTHIS: Be the Change" — Empowering students to lead inclusive innovation and drive improvements on campus.
+4. JUL 8, 2025 — "Business Launch Workshop" — A hands-on workshop to guide future founders in validating ideas, financial planning, marketing, and scaling their ventures.
+5. MAY 1, 2025 — "When Purpose Meets Innovation — EPICS Cohort" — VVLF cohosted student innovation for community impact, guiding 49 multidisciplinary teams to develop solutions for real-world problems.
+6. FEB 28, 2025 — "Pre-Incubation Cohort 1.0 Launch" — Join our Pre-Incubation Cohort to access expert mentorship, resources, and a thriving startup ecosystem.
+7. FEB 13, 2025 — "Innovation as a Career" — A successful session on "Entrepreneurship & Innovation as a Career Opportunity."
+8. JAN 12, 2025 — "Official VVLF Logo Launch" — Unveiling our new logo, symbolizing our commitment to fostering innovation, entrepreneurship, and technological excellence.
+
+Each event: date badge (month + day + year) | image placeholder (gray box with label) | title + description + "View Details →" link. Use blue dot on timeline line.
+
+### 11. TEAM SECTION
+
+**BOARD OF DIRECTORS** (4 cards in a row):
+- Shri R. Rajagopal — Vice Chairman
+- Shri K. Aditya Vissam — Secretary
+- Dr. K. Lakshmi Prasad — Director
+- Dr. Sanjay Dubey — Principal
+
+**OUR TEAM** (2 cards):
+- Dr. M. K. Kaushik — Director (with LinkedIn icon)
+- Rohith Sirpa — Manager (with LinkedIn icon)
+
+Each card: circular/square photo placeholder + name + title + subtle card shadow
+
+### 12. INSTAGRAM & LINKEDIN LIVE FEED SECTION
+Add a social media section titled "Stay Connected" with:
+- An embedded Instagram feed widget using the public embed URL: https://www.instagram.com/vishnuventurelabsfoundation/ — show as an iframe or use a placeholder card with "Follow us on Instagram @vishnuventurelabsfoundation" with a live link and Instagram icon
+- A LinkedIn company follow button/embed for: https://www.linkedin.com/company/vishnu-venture-labs-foundation/
+- Style: two-column layout. Left = Instagram preview (iframe embed of their profile or a mock feed grid showing last 6 posts). Right = LinkedIn card with follow CTA.
+- Add note: "For live feed, user should connect Elfsight or LightWidget Instagram widget by pasting the widget script."
+
+### 13. GET IN TOUCH / CONTACT SECTION
+**Updated contact section with:**
+- Left: Contact form with fields: First Name, Last Name, Email, Comment or Message → Submit button
+- Right info block:
+  - MEET US: Vishnu Venture Labs Foundation, Vishnupur, Narsapur, Suryapaget, Narsapur - 502313
+  - CALL US: [Add phone number placeholder]
+  - EMAIL US: vvlf@bvrit.ac.in with LinkedIn icon
+  - FOLLOW US: Instagram icon (link to https://www.instagram.com/vishnuventurelabsfoundation/), LinkedIn icon (link to https://www.linkedin.com/company/vishnu-venture-labs-foundation/), Facebook icon
+
+### 14. FOOTER
+- VVLF logo + tagline
+- Quick links: Home, Programs, Facilities, Startups, Team, Events
+- Social icons: Instagram, LinkedIn, Facebook
+- Copyright: © 2025 Vishnu Venture Labs Foundation
+
+---
+
+## DESIGN REQUIREMENTS (MAKE IT 10/10):
+
+**Color Palette:**
+- Primary: Deep Navy #0A1628
+- Secondary Blue: #1E3A6E  
+- Accent: Electric Blue #2563EB
+- Light Accent: #60A5FA
+- Background: #F8FAFF (very light blue-white)
+- Text: #0F172A
+- White: #FFFFFF
+
+**Typography:**
+- Headings: 'Syne' or 'Space Grotesk' (bold, geometric) — import from Google Fonts
+- Body: 'DM Sans' or 'Plus Jakarta Sans'
+- Accent labels: uppercase tracking-widest
+
+**Animations:**
+- Scroll-triggered fade-up animations using Intersection Observer API
+- Animated counter numbers in stats section
+- Smooth hover effects on all cards (translateY -4px + shadow)
+- Sticky navbar with backdrop-blur on scroll
+- Timeline dot pulse animation
+- Hero text stagger entrance animation
+
+**Layout:**
+- Max-width: 1200px, centered
+- Section padding: 80px top/bottom
+- Card border-radius: 16px
+- Use CSS Grid and Flexbox throughout
+- Mobile-responsive (hamburger menu on mobile)
+
+**Component Quality:**
+- All buttons: rounded-full with hover scale + shadow
+- Cards: white bg, subtle border, hover lift shadow
+- Section headers: small uppercase colored label above big heading (like "OUR PROGRAMS" in blue, then "Empowering the Next Generation" in black)
+- Use lucide-react or heroicons for all icons
+- Navigation active state indicator
+
+---
+
+## TECH STACK:
+- React (functional components + hooks)
+- Tailwind CSS for styling
+- Framer Motion for animations (optional but preferred)
+- React Router or simple scroll navigation
+- No backend needed — all static data
+
+---
+
+## DELIVERABLE:
+Build this as a complete, single-file or well-organized multi-component React app that I can run with `npm start`. Make it visually stunning, pixel-perfect, and modern — comparable to YC, T-Hub, or Scaler's websites. Every section should look polished and professional. The website should make Vishnu Venture Labs Foundation look like a world-class innovation hub.
+
+Start building immediately. Do not ask clarifying questions.
