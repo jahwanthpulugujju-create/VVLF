@@ -63,24 +63,24 @@ export function Navbar() {
 
         {/* ── Logo ── */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group" aria-label="Vishnu Venture Labs Foundation Home">
-          <div className="group-hover:scale-105 transition-all duration-300">
-            {transparent ? (
-              <div className="rounded-xl px-2.5 py-1.5 bg-white shadow-md border border-white/20 flex items-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/vvlf-real-logo.png`}
-                  alt="Vishnu Venture Labs Foundation"
-                  className="h-8 sm:h-9 w-auto object-contain"
-                />
-              </div>
-            ) : (
-              <div className="flex items-center py-0.5">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/vvlf-real-logo.png`}
-                  alt="Vishnu Venture Labs Foundation"
-                  className="h-8 sm:h-9 w-auto object-contain"
-                />
-              </div>
-            )}
+          <div className="flex items-center gap-2.5 group-hover:scale-105 transition-all duration-300">
+            <img
+              src={`${import.meta.env.BASE_URL}images/vvlf-emblem.png`}
+              alt="Vishnu Venture Labs Foundation"
+              className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-contain drop-shadow-md"
+            />
+            <div className="flex flex-col">
+              <span className={`font-bold text-base sm:text-lg tracking-tight leading-tight font-display ${
+                transparent ? "text-white" : "text-[#080c14]"
+              }`}>
+                Vishnu Venture Labs
+              </span>
+              <span className={`text-[10px] tracking-widest uppercase font-bold leading-none ${
+                transparent ? "text-blue-300" : "text-primary"
+              }`}>
+                Foundation
+              </span>
+            </div>
           </div>
         </Link>
 

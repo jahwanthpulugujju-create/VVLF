@@ -30,12 +30,20 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1 space-y-6">
             <Link href="/" className="inline-block group">
-              <div className="rounded-xl p-2.5 bg-white shadow-md border border-white/20 w-fit group-hover:scale-105 transition-transform duration-300">
+              <div className="flex items-center gap-3 group-hover:scale-105 transition-transform duration-300">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/vvlf-real-logo.png`}
+                  src={`${import.meta.env.BASE_URL}images/vvlf-emblem.png`}
                   alt="Vishnu Venture Labs Foundation"
-                  className="h-10 w-auto object-contain"
+                  className="h-10 w-10 rounded-full object-contain drop-shadow-md"
                 />
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg text-white font-display leading-tight">
+                    Vishnu Venture Labs
+                  </span>
+                  <span className="text-[10px] tracking-widest uppercase font-bold text-blue-400">
+                    Foundation
+                  </span>
+                </div>
               </div>
             </Link>
             <p className="text-white/55 text-sm leading-relaxed max-w-xs">

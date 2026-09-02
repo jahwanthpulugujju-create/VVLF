@@ -2,11 +2,6 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Cpu, Microchip, UserCheck, Leaf, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import bvritLogo from "@assets/bvrit-logo_1775501124732.png";
-import kaitekiLogo from "@assets/kaiteki-logo_1775501124734.png";
-import tgicLogo from "@assets/TGIC-new-logo_1775501124735.png";
-import tgtfLogo from "@assets/tgtf-logo-_1775501124736.png";
-
 export function AboutSection() {
   const thrustAreas = [
     { icon: Cpu, title: "Deep Tech", desc: "AI, IoT, Robotics, and emerging technologies shaping tomorrow.", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20", glow: "hover:border-blue-400/40 hover:shadow-blue-400/10" },
@@ -21,7 +16,7 @@ export function AboutSection() {
       fullName: "BV Raju Institute of Technology",
       desc: "Academic parent institution and campus host",
       role: "Academic Partner",
-      logo: bvritLogo,
+      logo: `${import.meta.env.BASE_URL}images/partner-bvrit.png`,
       logoBg: "bg-white",
     },
     {
@@ -29,7 +24,7 @@ export function AboutSection() {
       fullName: "Kaiteki Innovations",
       desc: "Industry partner for deep tech and assistive tech",
       role: "Industry Partner",
-      logo: kaitekiLogo,
+      logo: `${import.meta.env.BASE_URL}images/partner-kaiteki.png`,
       logoBg: "bg-white",
     },
     {
@@ -37,7 +32,7 @@ export function AboutSection() {
       fullName: "Telangana Government Innovation Council",
       desc: "Government partner enabling startup access across Telangana",
       role: "Government Partner",
-      logo: tgicLogo,
+      logo: `${import.meta.env.BASE_URL}images/partner-tgic.png`,
       logoBg: "bg-white",
     },
     {
@@ -45,7 +40,7 @@ export function AboutSection() {
       fullName: "The Good Talk Factory Foundation",
       desc: "Communication and storytelling partner for our founders",
       role: "Storytelling Partner",
-      logo: tgtfLogo,
+      logo: `${import.meta.env.BASE_URL}images/partner-tgf.png`,
       logoBg: "bg-white",
     },
   ];
