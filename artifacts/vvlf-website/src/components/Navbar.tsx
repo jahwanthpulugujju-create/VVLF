@@ -62,25 +62,21 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
         {/* ── Logo ── */}
-        <Link href="/" className="flex items-center gap-3 shrink-0 group" aria-label="Vishnu Venture Labs Foundation Home">
-          <div className="flex items-center gap-2.5 group-hover:scale-105 transition-all duration-300">
-            <img
-              src={`${import.meta.env.BASE_URL}images/vvlf-emblem.png`}
-              alt="Vishnu Venture Labs Foundation"
-              className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-contain drop-shadow-md"
-            />
-            <div className="flex flex-col">
-              <span className={`font-bold text-base sm:text-lg tracking-tight leading-tight font-display ${
-                transparent ? "text-white" : "text-[#080c14]"
-              }`}>
-                Vishnu Venture Labs
-              </span>
-              <span className={`text-[10px] tracking-widest uppercase font-bold leading-none ${
-                transparent ? "text-blue-300" : "text-primary"
-              }`}>
-                Foundation
-              </span>
-            </div>
+        <Link href="/" className="flex items-center shrink-0 group" aria-label="Vishnu Venture Labs Foundation Home">
+          <div className="group-hover:scale-105 transition-transform duration-300">
+            {transparent ? (
+              <img
+                src={`${import.meta.env.BASE_URL}images/vvlf-logo-patch.png`}
+                alt="Vishnu Venture Labs Foundation"
+                className="h-9 sm:h-10 w-auto object-contain drop-shadow-md"
+              />
+            ) : (
+              <img
+                src={`${import.meta.env.BASE_URL}images/vvlf-logo-transparent.png`}
+                alt="Vishnu Venture Labs Foundation"
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
+            )}
           </div>
         </Link>
 
