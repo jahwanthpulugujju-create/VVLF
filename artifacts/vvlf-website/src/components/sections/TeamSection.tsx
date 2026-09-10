@@ -12,15 +12,6 @@ const board = [
 
 const team = [
   {
-    name: "Dr. M. K. Kaushik",
-    title: "Director, VVLF",
-    photo: "team-kaushik.png",
-    bio: "Leading VVLF's innovation initiatives and guiding the startup ecosystem with deep technical and entrepreneurial expertise. Over 15 years in academia and industry.",
-    expertise: ["Deep Tech", "Entrepreneurship", "Mentorship"],
-    achievements: ["15+ Years Experience", "50+ Startups Mentored"],
-    linkedin: "https://www.linkedin.com/in/dr-m-k-kaushik-a6580b33/",
-  },
-  {
     name: "Rohith Sirpa",
     title: "Manager, VVLF",
     photo: "team-rohith.png",
@@ -79,7 +70,7 @@ export function TeamSection() {
             title="The People Driving VVLF"
             subtitle="Day-to-day builders of the ecosystem."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className={`grid grid-cols-1 ${team.length > 1 ? "md:grid-cols-2 max-w-4xl" : "max-w-md"} gap-8 mx-auto`}>
             {team.map((member, i) => (
               <FadeIn key={member.name} delay={i * 0.1}>
                 <motion.div

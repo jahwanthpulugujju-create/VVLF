@@ -13,7 +13,6 @@ export function CommunitySection() {
   ];
 
   const team = [
-    { name: "Dr. M. K. Kaushik", title: "Director", photo: "team-kaushik.png" },
     { name: "Rohith Sirpa", title: "Manager", photo: "team-rohith.png" }
   ];
 
