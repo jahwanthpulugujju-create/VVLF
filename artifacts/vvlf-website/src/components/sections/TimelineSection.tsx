@@ -100,7 +100,7 @@ const events = [
     outcome: "4 ventures incorporated · Pre-Incubation Cohort 1.0",
     location: "BVRIT Campus, Narsapur",
     audience: "Cohort 1.0 Founders",
-    img: "cohort-incorporation.png",
+    img: "cohort-incorporation.jpg",
     imgAlt: "VVLF Cohort 1.0 founders celebrating company incorporation milestone",
   },
   {
