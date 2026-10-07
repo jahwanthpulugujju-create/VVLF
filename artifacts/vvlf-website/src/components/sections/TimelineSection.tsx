@@ -5,6 +5,17 @@ import { Calendar, Filter, Clock, MapPin, Users, X, ArrowUpRight } from "lucide-
 
 const events = [
   {
+    date: "SEP 11, 2026", month: "SEP", day: "11", year: "2026",
+    type: "Community",
+    title: "Failathon 4th Edition",
+    desc: "24-hour experiential event where students embraced failure to build innovative solutions.",
+    outcome: "200+ students attended · Culture of learning from failure seeded",
+    location: "BVRIT Campus, Narsapur",
+    audience: "All BVRIT students & founders",
+    img: "failathon-4th-edition.jpg",
+    imgAlt: "Participants sharing startup experiences and learnings during Failathon 4th Edition event",
+  },
+  {
     date: "MAR 23–24, 2026", month: "MAR", day: "23", year: "2026",
     type: "Program",
     title: "Project SAARTHIS Session 5",
