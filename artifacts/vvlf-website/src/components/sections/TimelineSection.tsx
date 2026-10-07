@@ -11,8 +11,8 @@ const events = [
     desc: "24-hour experiential event where students embraced failure to build innovative solutions.",
     outcome: "200+ students attended · Culture of learning from failure seeded",
     location: "BVRIT Campus, Narsapur",
-    audience: "All BVRIT students & founders",
-    img: "failathon-4th-edition.jpg",
+    audience: "All BVRIT 1st year students",
+    img: "failathon.jpg",
     imgAlt: "Participants sharing startup experiences and learnings during Failathon 4th Edition event",
   },
   {
